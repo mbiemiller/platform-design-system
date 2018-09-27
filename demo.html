@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+  </head>
+  <body>
+    <div id="mainWrapper" class="content-wrapper">
+      <ul class="navigation">
+        <img class="navigation__logo" src="https://cdn.streamlabs.com/static/imgs/logos/kevin-standard.png">
+
+        <div>
+          <div id="themeToggle" class="toggle">
+            <button class="toggle__option toggle__option--active" onclick="enabledDayMode()">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="toggle__option" onclick="enabledNightMode()">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#accordions">Accordions</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#badges">Badges</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#buttons">Buttons</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#callouts">Callouts</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#colors">Colors</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#forms">Forms</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#grid">Grid & Spacing</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#inputs">Inputs</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#tables">Tables</a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#typography">Typography</a>
+        </li>
+      </ul>
+
+      <div class="content">
+        <div class="header design-system__header">
+          <h1>Streamlabs Platform: Design System</h1>
+          <a href="https://github.com/mbiemiller/platform-design-system" target="_blank" class="float-right button button--default">View on Gitub</a>
+          <p>This Design System is to help developers make native looking apps inside Streamlabs OBS.</p>
+        </div>
+
+        <div id="accordions" class="section">
+          <div class="design-system__title">Accordions</div>
+          <p>We've made this in pure css to keep things flexible. If you are using jQuery, Vue.js, or any other framework, feel free to use that for behavior and reference this styling.</p>
+
+          <div class="accordion-wrapper">
+            <div class="accordion">
+              <input class="accordion__input" id="tab-one" type="checkbox" name="accordion">
+              <label class="accordion__title" for="tab-one">
+                Accordion Title
+              </label>
+              <div class="accordion__content">
+                <div class="accordion__content-inner">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="badges" class="section">
+          <div class="design-system__title">Badges</div>
+          <p>By default, our badges are designed to be on the right side of elements with 8px of margin on the left. If you would like to use a badge on the left side of an element, add <code>.badge--left</code> and it will switch the margin to be on the right side.</p>
+
+          <p>Donation Alert <span class="badge">Animated</span></p>
+          <p><span class="badge badge--new badge--left">New</span> <a href="#">More Detailed Stats</a></p>
+          <span class="badge badge--left">Tag</span>
+          <span class="badge badge--left badge--beta">Beta</span>
+          <span class="badge badge--left badge--new">New</span>
+          <span class="badge badge--left badge--pro">Pro</span>
+          <span class="badge badge--left badge--warning">Warning</span>
+        </div>
+
+        <div id="buttons" class="section">
+          <div class="design-system__title">Buttons</div>
+          <p>Default sized buttons should be the most common use case. Large should only be used for marketing and big announcements. Use the action button sparingly for UX purposes. When multiple buttons are next to each other, wrap them in class <code>.button-group</code>. The default is assuming the buttons will be on the right side of the page, therefore 8px of margin is added on the left of each button in the group. Use class <code>.button-group--left</code> for buttons on the left side of the page, and margin will be moved to the right sides.</p>
+
+          <div class="section__group">
+            <h3>Default Size</h3>
+            <div class="button-group button-group--left">
+              <button class="button button--action">Action</button>
+              <button class="button button--default">Default</button>
+              <button class="button button--default" disabled>Disabled</button>
+              <button class="button button--warning">Warning</button>
+            </div>
+          </div>
+
+          <div class="section__group">
+            <h3>Large Size</h3>
+            <div class="button-group button-group--left">
+              <button class="button button--lg button--action">Action</button>
+              <button class="button button--lg button--default">Default</button>
+              <button class="button button--lg button--default" disabled>Disabled</button>
+              <button class="button button--lg button--warning">Warning</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="callouts" class="section">
+          <div class="design-system__title">Callouts</div>
+          <div class="callout callout--info">This is an info callout.</div>
+          <div class="callout callout--success">This is a success callout with a link. <a href="#">Link</a></div>
+          <div class="callout callout--warning">This is a warning callout.</div>
+        </div>
+
+        <div id="colors" class="section">
+          <div class="design-system__title">Colors</div>
+          <div class="design-system__colors">
+            <div>
+              <div>
+                <div class="design-system__color teal"></div>
+                <span>Action buttons</span>
+              </div>
+              <div>
+                <div class="design-system__color purple"></div>
+                <span>New</span>
+              </div>
+              <div>
+                <div class="design-system__color red"></div>
+                <span>Warnings</span>
+              </div>
+              <div>
+                <div class="design-system__color yellow-light"></div>
+                <span>Info</span>
+              </div>
+              <div>
+                <div class="design-system__color yellow-dark"></div>
+                <span>Info</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="design-system__color light-1"></div>
+                <span>Day Background, Night Titles</span>
+              </div>
+              <div>
+                <div class="design-system__color light-2"></div>
+                <span>Day Sections</span>
+              </div>
+              <div>
+                <div class="design-system__color light-3"></div>
+                <span>Day Default Buttons</span>
+              </div>
+              <div>
+                <div class="design-system__color light-4"></div>
+                <span>Night Paragraph Text</span>
+              </div>
+              <div>
+                <div class="design-system__color light-5"></div>
+                <span>Day & Night Icons</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="design-system__color dark-1"></div>
+                <span>Video Background, App Store Background</span>
+              </div>
+              <div>
+                <div class="design-system__color dark-2"></div>
+                <span>Night Sections, Day Titles</span>
+              </div>
+              <div>
+                <div class="design-system__color dark-3"></div>
+                <span>Night Background</span>
+              </div>
+              <div>
+                <div class="design-system__color dark-4"></div>
+                <span>Night Sections Alt</span>
+              </div>
+              <div>
+                <div class="design-system__color dark-5"></div>
+                <span>Day Paragraph, Night Default Buttons</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="forms" class="section">
+          <div class="design-system__title">Forms</div>
+          <p>Use <code>&lt;form&gt;</code> element or <code>.form</code> depending on your needs. Use <code>.form-group</code> to add margin to the bottom of each child of the form. <code>.form-group</code> will also put the label and input in our standard layout using css grid. At 980px, the form layout will change to a stacked view. Resize window to preview.</p>
+<pre>
+&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Text Input Label&lt;&#47;label&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Text Input Placeholder&quot;&gt;
+  &lt;&#47;div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Select Label&lt;&#47;label&gt;
+    &lt;select&gt;
+      &lt;option value=&quot;option_1&quot;&gt;Option 1&lt;&#47;option&gt;
+      &lt;option value=&quot;option_2&quot;&gt;Option 2&lt;&#47;option&gt;
+      &lt;option value=&quot;option_3&quot;&gt;Option 3&lt;&#47;option&gt;
+      &lt;option value=&quot;option_4&quot;&gt;Option 4&lt;&#47;option&gt;
+    &lt;&#47;select&gt;
+  &lt;&#47;div&gt;
+&lt;&#47;form&gt;
+</pre>
+          <form>
+            <div class="form-group">
+              <label>Text Input Label</label>
+              <input type="text" placeholder="Text Input Placeholder">
+            </div>
+
+            <div class="form-group">
+              <label>Select Label</label>
+              <select>
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Option 2</option>
+                <option value="option_3">Option 3</option>
+                <option value="option_4">Option 4</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div id="grid" class="section">
+          <div class="design-system__title">Grid & Spacing</div>
+          <p>We are using a 12 column css grid. For our margins & padding we work on multiples on 8px. Notice in the Page Heading example, the buttons have 8px of padding and 8px of margin between them.</p>
+
+          <div class="grid-example grid-example--1">
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+          </div>
+
+          <div class="grid-example grid-example--2">
+            <div class="grid-example__col"></div>
+            <div class="grid-example__col"></div>
+          </div>
+
+          <div class="header">
+            <h1>Page Heading</h1>
+            <div class="float-right button-group">
+              <button class="button button--default">Settings</button>
+              <button class="button button--action">New Item</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="inputs" class="section">
+          <div class="design-system__title">Inputs</div>
+
+          <div class="form">
+            <div class="form-group">
+              <label>Text Input Label</label>
+              <input type="text" placeholder="Text Input Placeholder">
+            </div>
+
+            <div class="form-group">
+              <label>Select Label</label>
+              <select>
+                <option value="option_1">Option 1</option>
+                <option value="option_2">Option 2</option>
+                <option value="option_3">Option 3</option>
+                <option value="option_4">Option 4</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Textarea Label</label>
+              <textarea rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Single Checkbox</label>
+              <div class="checkbox">
+                <input class="checkbox__input" type="checkbox" checked>
+                <label class="checkbox__label">Option 1</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Checkbox Group</label>
+
+              <div class="checkbox-group">
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox">
+                  <label class="checkbox__label">Option 1</label>
+                </div>
+
+                <div class="checkbox">
+                  <input class="checkbox__input" type="checkbox">
+                  <label class="checkbox__label">Option 1</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Radio Button Group</label>
+
+              <div class="checkbox-group">
+                <div class="checkbox">
+                  <input class="checkbox__input" type="radio" value="radio_example_1" name="radio_example" checked>
+                  <label class="checkbox__label">Option 1</label>
+                </div>
+
+                <div class="checkbox">
+                  <input class="checkbox__input" type="radio" value="radio_example_2" name="radio_example">
+                  <label class="checkbox__label">Option 1</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Button Toggle Label</label>
+              <div>
+                <div id="exampleButtonToggle" class="toggle">
+                  <button class="toggle__option toggle__option--active" onclick="">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="toggle__option" onclick="">
+                    <i class="fas fa-eye-slash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Switch Toggle Label</label>
+              <label class="switch">
+                <input class="switch__input" type="checkbox">
+                <span class="switch__slider"></span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>Slider Label</label>
+              <input name="range_example" type="range" min="0" max="100" step="10">
+            </div>
+          </div>
+        </div>
+
+        <div id="tables" class="section">
+          <div class="design-system__title">Tables</div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Morgan</td>
+                <td>San Francisco</td>
+                <td>09/25/2018</td>
+              </tr>
+              <tr>
+                <td>Andy</td>
+                <td>Vancouver</td>
+                <td>09/23/2018</td>
+              </tr>
+              <tr>
+                <td>Eric</td>
+                <td>Las Vegas</td>
+                <td>09/18/2018</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="typography" class="section">
+        </div>
+
+        <div id="typography" class="section">
+          <div class="design-system__title">Typography</div>
+          <p>Letter spacing should be 0% on everything.</p>
+          <div class="section__group">
+            <code>&lt;h1&gt;</code>
+            <h1>Page Title - Roboto Bold 20px</h1>
+          </div>
+          <div class="section__group">
+            <code>&lt;h2&gt;</code>
+            <h2>Page Sub Title - Roboto Medium 16px</h2>
+          </div>
+          <div class="section__group">
+            <code>&lt;p&gt;</code>
+            <p>Paragraph - Roboto Regular 14px</p>
+          </div>
+          <div class="section__group">
+            <code>&lt;a&gt;</code><br>
+            <a href="#">Link - Roboto Regular 14px Underlined</a>
+          </div>
+          <div class="section__group">
+            <code>&lt;div class=&quot;small-text&quot;&gt</code>
+            <div class="small-text">Caption/Small Print - Roboto Regular 12px</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      // Day Night Theme Toggle
+      var themeToggle = document.getElementById("themeToggle");
+      var themeOptions = themeToggle.getElementsByClassName("toggle__option");
+
+      for (var i = 0; i < themeOptions.length; i++) {
+        themeOptions[i].addEventListener("click", function() {
+          var current = themeToggle.getElementsByClassName("toggle__option--active");
+          current[0].className = current[0].className.replace(" toggle__option--active", "");
+          this.className += " toggle__option--active";
+        });
+      }
+
+      function enabledDayMode() {
+        var wrapper = document.getElementById("mainWrapper");
+        wrapper.classList.remove("night-theme");
+      }
+
+      function enabledNightMode() {
+        var wrapper = document.getElementById("mainWrapper");
+        wrapper.classList.add("night-theme");
+      }
+
+      // Example Button Toggle
+      var exampleButtonToggle = document.getElementById("exampleButtonToggle");
+      var exampleOptions = exampleButtonToggle.getElementsByClassName("toggle__option");
+
+      for (var i = 0; i < exampleOptions.length; i++) {
+        exampleOptions[i].addEventListener("click", function() {
+          var current = exampleButtonToggle.getElementsByClassName("toggle__option--active");
+          current[0].className = current[0].className.replace(" toggle__option--active", "");
+          this.className += " toggle__option--active";
+        });
+      }
+    </script>
+  </body>
+</html>
