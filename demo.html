@@ -5,7 +5,7 @@
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Streamlabs Platform Design System</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" type="text/css">
@@ -204,27 +204,39 @@
           <div class="design-system__title">Forms</div>
           <p>Use <code>&lt;form&gt;</code> element or <code>.form</code> depending on your needs. Use <code>.form-group</code> to add margin to the bottom of each child of the form. <code>.form-group</code> will also put the label and input in our standard layout using css grid. At 980px, the form layout will change to a stacked view. Resize window to preview.</p>
 <pre>
-&lt;form&gt;
+  &lt;form&gt;
   &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Text Input Label&lt;&#47;label&gt;
+    &lt;label&gt;Text Input Label&lt;/label&gt;
     &lt;input type=&quot;text&quot; placeholder=&quot;Text Input Placeholder&quot;&gt;
-  &lt;&#47;div&gt;
+  &lt;/div&gt;
 
   &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label&gt;Select Label&lt;&#47;label&gt;
+    &lt;label&gt;Number Input Label&lt;/label&gt;
+    &lt;input type=&quot;number&quot; placeholder=&quot;Number Input Placeholder&quot;&gt;
+    &lt;div class=&quot;form-group__help-text&quot;&gt;This is helper text for a form input&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label&gt;Select Label&lt;/label&gt;
     &lt;select&gt;
-      &lt;option value=&quot;option_1&quot;&gt;Option 1&lt;&#47;option&gt;
-      &lt;option value=&quot;option_2&quot;&gt;Option 2&lt;&#47;option&gt;
-      &lt;option value=&quot;option_3&quot;&gt;Option 3&lt;&#47;option&gt;
-      &lt;option value=&quot;option_4&quot;&gt;Option 4&lt;&#47;option&gt;
-    &lt;&#47;select&gt;
-  &lt;&#47;div&gt;
-&lt;&#47;form&gt;
+      &lt;option value=&quot;option_1&quot;&gt;Option 1&lt;/option&gt;
+      &lt;option value=&quot;option_2&quot;&gt;Option 2&lt;/option&gt;
+      &lt;option value=&quot;option_3&quot;&gt;Option 3&lt;/option&gt;
+      &lt;option value=&quot;option_4&quot;&gt;Option 4&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </pre>
           <form>
             <div class="form-group">
               <label>Text Input Label</label>
               <input type="text" placeholder="Text Input Placeholder">
+            </div>
+
+            <div class="form-group">
+              <label>Number Input Label</label>
+              <input type="number" placeholder="Number Input Placeholder">
+              <div class="form-group__help-text">This is helper text for a form input</div>
             </div>
 
             <div class="form-group">
@@ -361,6 +373,17 @@
             <div class="form-group">
               <label>Slider Label</label>
               <input name="range_example" type="range" min="0" max="100" step="10">
+            </div>
+
+            <div class="form-group">
+              <label>Color Picker Label</label>
+              <div class="color-picker">
+                <input type="text" class="color-picker__input" placeholder="#ffffff">
+                <div class="color-picker__swatch"></div>
+              </div>
+              <div class="form-group__help-text">
+                Please note this is just a static html demo as we don't force you to use any certain Javascript library
+              </div>
             </div>
           </div>
         </div>
